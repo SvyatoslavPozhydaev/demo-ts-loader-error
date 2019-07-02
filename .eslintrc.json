@@ -1,0 +1,48 @@
+{
+  "extends": [
+    "airbnb",
+		"prettier",
+		"plugin:import/errors",
+		"plugin:import/warnings",
+		"plugin:import/typescript"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+		"prettier",
+		"import"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["~", "./src"]
+        ],
+        "extensions": [".js", ".jsx", ".tsx",".ts",".es6", ".vue", ".sass", ".scss", ".json"]
+      },
+      "node": {
+        "extensions": [".js", ".jsx", ".tsx",".ts",".es6", ".vue", ".sass", ".scss", ".json"],
+        "paths": ["src"]
+			},
+			"typescript": {}
+    }
+  },
+  "rules": {
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": true }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+    "react/prefer-stateless-function": 1,
+    "prettier/prettier": "error",
+    "import/prefer-default-export": "off",
+    "array-element-newline": ["error", "consistent"],
+    "array-bracket-newline": [ "error", "consistent" ],
+    "no-unused-expressions": ["error", { "allowShortCircuit": true, "allowTernary": true }],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "import/no-unresolved": "error",
+    "jsx-a11y/click-events-have-key-events": "off"
+  }
+}

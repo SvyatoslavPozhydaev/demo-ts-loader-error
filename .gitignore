@@ -1,0 +1,10 @@
+.idea/*
+.vscode/*
+node_modules/*
+bower_components/*
+build/*
+public/build/*
+public/css/*
+public/js/*
+public/images/*
+public/fonts/*
